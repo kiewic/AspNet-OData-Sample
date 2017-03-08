@@ -36,5 +36,7 @@ After each change:
 ### References
 
 1. [Create an OData v4 Endpoint with EntityFramework][create-an-odata-v4-endpoint]
+2. [Entity Framework Code First Migrations][migrations]
 
 [create-an-odata-v4-endpoint]: https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint
+[migrations]: https://msdn.microsoft.com/en-us/data/jj591621
