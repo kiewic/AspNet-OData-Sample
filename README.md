@@ -20,6 +20,19 @@ The instance name can be obtained and started with:
     cmd> sqllocaldb.exe i
     cmd> sqllocaldb.exe s "MSSQLLocalDB"
 
+### Migrations
+
+Setup steps:
+
+1. `Enable-Migrations`
+
+After each change:
+
+1. `Add-Migration AddProductNullableQuality` creates a migration class describing the changes.
+2. `Update-Database` applies the changes.
+
+
+
 ### References
 
 1. [Create an OData v4 Endpoint with EntityFramework][create-an-odata-v4-endpoint]

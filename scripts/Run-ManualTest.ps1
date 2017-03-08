@@ -62,6 +62,8 @@ Get-Request http://localhost:19158/Products | Out-Null
 
 $body = @{
     Name = "Foo Bar";
+    Quality = "Low";
+    NullableQuality = $null;
 } | ConvertTo-Json -Compress
 $response = Post-Request http://localhost:19158/Products $body
 Write-Host $response.RawContent

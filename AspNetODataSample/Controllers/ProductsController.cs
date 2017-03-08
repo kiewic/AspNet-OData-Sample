@@ -7,17 +7,16 @@ using System.Web.OData;
 
 namespace AspNetODataSample.Controllers
 {
+    [EnableQuery]
     public class ProductsController : ODataController
     {
         private ProductsContext db = new ProductsContext();
 
-        [EnableQuery]
         public IQueryable<Product> Get()
         {
             return db.Products;
         }
 
-        [EnableQuery]
         public SingleResult<Product> Get([FromODataUri] int key)
         {
             IQueryable<Product> result = db.Products.Where(p => p.Id == key);

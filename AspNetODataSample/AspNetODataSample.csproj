@@ -161,8 +161,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703080904567_InitialCreate.cs" />
+    <Compile Include="Migrations\201703080904567_InitialCreate.Designer.cs">
+      <DependentUpon>201703080904567_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081816038_AddProductQuality.cs" />
+    <Compile Include="Migrations\201703081816038_AddProductQuality.Designer.cs">
+      <DependentUpon>201703081816038_AddProductQuality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081823277_AddProductNullableQuality.cs" />
+    <Compile Include="Migrations\201703081823277_AddProductNullableQuality.Designer.cs">
+      <DependentUpon>201703081823277_AddProductNullableQuality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductsContext.cs" />
+    <Compile Include="Models\Quality.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +195,17 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Products\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703080904567_InitialCreate.resx">
+      <DependentUpon>201703080904567_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081816038_AddProductQuality.resx">
+      <DependentUpon>201703081816038_AddProductQuality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081823277_AddProductNullableQuality.resx">
+      <DependentUpon>201703081823277_AddProductNullableQuality.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
