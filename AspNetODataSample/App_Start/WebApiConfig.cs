@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AspNetODataSample.Models;
 using System.Web.Http;
+using System.Web.OData.Builder;
+using System.Web.OData.Extensions;
 
 namespace AspNetODataSample
 {
@@ -9,16 +9,14 @@ namespace AspNetODataSample
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            //
+            // Convention model builder
+            //
+            var builder = new ODataConventionModelBuilder();
 
-            // Web API routes
-            config.MapHttpAttributeRoutes();
+            builder.EntitySet<Product>("Products");
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            config.MapODataServiceRoute("ODataRoute", null, builder.GetEdmModel());
         }
     }
 }
